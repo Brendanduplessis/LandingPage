@@ -578,6 +578,93 @@ li {
   margin-bottom: 18px;
 }
 
+[hidden] {
+  display: none !important;
+}
+
+.note {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.expired {
+  border-left: 3px solid var(--warn);
+  padding: 10px 14px;
+  background: #fff;
+}
+
+.assoc {
+  padding-left: 1.1em;
+}
+
+.stages-list {
+  display: grid;
+  gap: 8px;
+  margin: 8px 0 4px;
+}
+
+details.stage {
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+details.stage summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 14px;
+  min-height: var(--tap);
+  cursor: pointer;
+  font-weight: 300;
+  text-transform: lowercase;
+  list-style: none;
+}
+
+details.stage summary::-webkit-details-marker {
+  display: none;
+}
+
+details.stage summary::before {
+  content: "+";
+  width: 1em;
+  color: var(--muted);
+}
+
+details.stage[open] summary::before {
+  content: "−";
+}
+
+details.stage summary > span:first-child {
+  flex: 1;
+}
+
+.stage-sum {
+  color: var(--muted);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.task-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 150px;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 14px;
+  border-top: 1px solid var(--line);
+}
+
+.task-row select {
+  border: 1px solid #bbb;
+  border-radius: 0;
+  background: #fff;
+  color: var(--ink);
+  min-height: var(--tap);
+  padding: 6px 8px;
+  font-size: 16px;
+  width: 100%;
+}
+
 /* ---------- large screens ---------- */
 @media (min-width: 1600px) {
   :root {
@@ -775,6 +862,15 @@ li {
 
   .task-hours {
     grid-column: 2;
+  }
+
+  .task-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .breakdown {
+    font-size: 0.82rem;
   }
 }
 

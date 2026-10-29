@@ -135,7 +135,15 @@
         h.p2 +
         "</p><p>" +
         h.p3 +
-        "</p></div><div class='stack'><img src='" +
+        "</p><h2>" +
+        h.bioTitle +
+        "</h2>" +
+        h.bio.map(function (para) { return "<p>" + para + "</p>"; }).join("") +
+        "<h3>" +
+        h.assocTitle +
+        "</h3><ul class='assoc'>" +
+        h.assoc.map(function (x) { return "<li>" + x + "</li>"; }).join("") +
+        "</ul></div><div class='stack'><img src='" +
         asset +
         "img/about-stone.jpg' alt='' loading='lazy' decoding='async'><img src='" +
         asset +
@@ -288,51 +296,48 @@
     }
     if (page === "feesCalc") {
       var f = copy.feesCalc;
-      var tasks = BOS.rates.tasks
-        .map(function (task) {
+      var F = BOS.fees;
+      var box = fill(f.box);
+      var head = "<h1>" + f.title + "</h1><p class='lede'>" + f.lede + "</p><aside class='disclaimer wide'>" + box + "</aside>";
+      if (feesExpired()) {
+        return head + "<p class='expired'>" + fill(f.expired) + "</p><p><a href='" + href("contact") + "'>" + copy.nav[6].label + " >>></a></p>";
+      }
+      var af = lang() === "af";
+      var stageHtml = F.stages
+        .map(function (st, si) {
           return (
-            "<label><input type='checkbox' name='task' value='" +
-            task.id +
-            "' checked><span class='task-text'><span class='task-name'>" +
-            (lang() === "af" ? task.labelAf : task.labelEn) +
-            "</span><small>" +
-            (lang() === "af" ? task.descAf : task.descEn) +
-            "</small></span><span class='task-hours'>" +
-            task.hours +
-            " h</span></label>"
+            "<details class='stage'" + (si === 0 ? " open" : "") + "><summary><span>" + (af ? st.af : st.en) +
+            "</span><span class='stage-sum' data-stage='" + si + "'>" + Math.round(st.pct * 100) + "%</span></summary>" +
+            st.tasks
+              .map(function (tk, ti) {
+                return (
+                  "<div class='task-row'><span class='task-text'><span class='task-name'>" + (af ? tk.af : tk.en) +
+                  "</span><small>" + (tk.pct * 100).toFixed(1) + "% " + f.share + "</small></span>" +
+                  "<select class='task-state' data-s='" + si + "' data-t='" + ti + "' aria-label='" + f.stage + " " + (si + 1) + "." + (ti + 1) + "'>" +
+                  ["I", "L", "X"].map(function (k) { return "<option value='" + k + "'>" + f.state[k] + "</option>"; }).join("") +
+                  "</select></div>"
+                );
+              })
+              .join("") +
+            "</details>"
           );
         })
         .join("");
       return (
-        "<h1>" +
-        f.title +
-        "</h1><p class='lede'>" +
-        f.lede +
-        "</p><aside class='disclaimer wide'>" +
-        f.box +
-        "</aside><form class='calc' id='calc-fees'>" +
-        field(lang() === "af" ? "aanduidende boukoste (ZAR)" : "indicative building cost (ZAR)", "buildcost", "number", "3000000") +
-        "<div class='field'><label>" +
-        (lang() === "af" ? "metode" : "method") +
-        "</label><select id='method'><option value='pct'>" +
-        (lang() === "af" ? "projekkoste-gebaseer" : "project cost based") +
-        "</option><option value='time'>" +
-        (lang() === "af" ? "tyd-gebaseer" : "time based") +
-        "</option><option value='architad'>ArchiTAD</option></select></div>" +
-        "<div class='field'><label>" +
-        (lang() === "af" ? "projektipe" : "project type") +
-        "</label><select id='feeType'><option value='house'>" +
-        (lang() === "af" ? "woon" : "residential") +
-        "</option><option value='commercial'>" +
-        (lang() === "af" ? "kommersieel" : "commercial") +
-        "</option><option value='industrial'>" +
-        (lang() === "af" ? "industrieel" : "industrial") +
-        "</option></select></div>" +
-        field(lang() === "af" ? "hoofure" : "principal hours", "phours", "number", "40") +
-        field(lang() === "af" ? "tegnoloog-ure" : "technologist hours", "thours", "number", "80") +
-        "<h3>ArchiTAD</h3><div class='service-list'>" +
-        tasks +
-        "</div>" +
+        head +
+        "<form class='calc' id='calc-fees'>" +
+        field(f.budget, "budget", "number", "3000000") +
+        "<div class='field'><label for='cx'>" + f.complexity + "</label><select id='cx'>" +
+        ["low", "medium", "high"].map(function (k) { return "<option value='" + k + "'" + (k === "medium" ? " selected" : "") + ">" + f.cx[k] + "</option>"; }).join("") +
+        "</select></div>" +
+        "<div class='field'><label for='method'>" + f.method + "</label><select id='method'>" +
+        ["scale", "time", "architad"].map(function (k) { return "<option value='" + k + "'>" + f.methods[k] + "</option>"; }).join("") +
+        "</select></div>" +
+        "<div data-for='time'>" + field(f.hours, "hours", "number", "120") + "</div>" +
+        "<div data-for='architad'><div class='field'><label for='pkg'>" + f["package"] + "</label><select id='pkg'>" +
+        ["full", "half", "minimal", "custom"].map(function (k) { return "<option value='" + k + "'>" + f.packages[k] + "</option>"; }).join("") +
+        "</select></div><div class='stages-list'>" + stageHtml + "</div></div>" +
+        "<p class='note'>" + fill(f.rateNote) + "</p>" +
         acceptBlock() +
         actions() +
         "<div class='result' id='result'></div></form>"
@@ -358,6 +363,9 @@
         "</option><option value='warehouse'>" +
         (lang() === "af" ? "pakhuis" : "warehouse") +
         "</option></select></div>" +
+        "<div class='field'><label for='cx'>" + copy.feesCalc.complexity + "</label><select id='cx'>" +
+        ["low", "medium", "high"].map(function (k) { return "<option value='" + k + "'" + (k === "medium" ? " selected" : "") + ">" + copy.feesCalc.cx[k] + "</option>"; }).join("") +
+        "</select></div>" +
         field(lang() === "af" ? "grond (ZAR)" : "land (ZAR)", "land", "number", "1500000") +
         field(lang() === "af" ? "kontingensie %" : "contingency %", "cont", "number", "10") +
         acceptBlock() +
@@ -466,6 +474,32 @@
     }
     return "<h1>bos</h1>";
   }
+
+  var MONTHS = {
+    en: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    af: ["Januarie", "Februarie", "Maart", "April", "Mei", "Junie", "Julie", "Augustus", "September", "Oktober", "November", "Desember"]
+  };
+
+  function longDate(iso) {
+    var p = String(iso).split("-");
+    return Number(p[2]) + " " + MONTHS[lang()][Number(p[1]) - 1] + " " + p[0];
+  }
+
+  function feesExpired() {
+    var d = new Date();
+    var today = d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2);
+    return today > BOS.fees.validUntil;
+  }
+
+  function fill(text) {
+    return String(text)
+      .replace("{updated}", longDate(BOS.fees.updated))
+      .replace("{expires}", longDate(BOS.fees.validUntil))
+      .replace("{rate}", "R " + BOS.fees.hourly.toLocaleString("en-ZA"));
+  }
+
+  window.bosFeesExpired = feesExpired;
+  window.bosFill = fill;
 
   function field(label, id, type, val) {
     return (

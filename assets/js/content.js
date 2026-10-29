@@ -70,7 +70,15 @@ window.BOS = {
         aboutTitle: "about us",
         p1: "We work for buildings that last, age honestly, and keep their value. The studio treats budget, programme, and statutory process as design tools rather than afterthoughts.",
         p2: "Practice is grounded in measured drawing, clear documentation, and a strict architectural process: inception through close-out, with the client able to see what each stage costs and delivers.",
-        p3: "Rudolf van Schalkwyk is a Professional Architect. Work is offered across new buildings, alterations, heritage-sensitive fabric, and repeat or measured work, with facilitation of council submissions where required."
+        p3: "Work is offered across new buildings, alterations, heritage-sensitive fabric, and repeat or measured work, with facilitation of council submissions where required.",
+        bioTitle: "Rudolf van Schalkwyk",
+        bio: [
+          "Rudolf van Schalkwyk is a Professional Architect with experience in a wide range of project types. He has engaged in the design of Industrial, Educational, Residential, and Institutional projects ranging in sensitivity and complexity, and encompassing budgets in excess of R300m.",
+          "An avid student of architecture, he completed his Master's Degree at the University of Pretoria, and later acquired a Bachelor of Science in Quantity Surveying from the University of the Free State.",
+          "He has written a book about budgeting a building project, but has yet to find success in securing its publication."
+        ],
+        assocTitle: "associations",
+        assoc: ["SACAP — Professional Architect (PrArch)"]
       },
       design: {
         title: "design philosophy",
@@ -136,8 +144,26 @@ window.BOS = {
       feesCalc: {
         title: "architectural services calculator",
         docTitle: "architectural fees — bos",
-        lede: "Fees may be read three ways. None of these is an offer of discount, and none replaces a signed client–architect agreement.",
-        box: "INDEMNITY: Fee outputs are educational. SACAP guidelines, time records, and the actual brief govern a real appointment."
+        lede: "Fees may be read three ways: as a share of the construction budget, by time, or service by service (ArchiTAD). No discounts are offered, and none of these replaces a signed client–architect agreement.",
+        box: "INDEMNITY: Fee outputs are indicative only and are based on the bos professional fee rates updated {updated}. These rates expire on {expires}; after that date this calculator is switched off until the rates are renewed. SACAP guidelines, the actual brief and a signed client–architect agreement govern a real appointment. Amounts exclude VAT.",
+        expired: "The fee rates on this page expired on {expires}. Please contact bos for current professional fees.",
+        budget: "construction budget (ZAR)",
+        complexity: "project complexity",
+        cx: { low: "low", medium: "medium", high: "high" },
+        method: "method",
+        methods: { scale: "project cost based", time: "time based", architad: "ArchiTAD (service by service)" },
+        hours: "estimated hours",
+        package: "service package",
+        packages: { full: "full service", half: "half service", minimal: "minimal service", custom: "custom" },
+        state: { I: "included", L: "limited", X: "not included" },
+        stage: "stage",
+        share: "share",
+        fee: "fee",
+        totalFee: "architectural fee",
+        totalHours: "planned hours",
+        deposit: "deposit required",
+        rateNote: "Hourly rate {rate}/h. Limited services count at half their share.",
+        bandNote: "Fee band from {lo}: base {base} plus {pct} on the amount above the band start."
       },
       projectCalc: {
         title: "project cost calculator",
@@ -251,7 +277,15 @@ window.BOS = {
         aboutTitle: "oor ons",
         p1: "Ons werk vir geboue wat hou, eerlik verouder, en waarde behou. Begroting, program en statutêre proses is ontwerpgereedskap, nie naskrifte nie.",
         p2: "Die praktyk rus op gemeettekenwerk, duidelike dokumentasie, en ’n streng argitektoniese proses: van aanvang tot afsluiting, sodat die kliënt kan sien wat elke stadium kos en lewer.",
-        p3: "Rudolf van Schalkwyk is ’n Professionele Argitek. Werk sluit nuwe geboue, verbouings, erfenis-sensitiewe stof, en herhaal- of opmeetwerk in, met fasilitering van stadsraad-indienings waar nodig."
+        p3: "Werk sluit nuwe geboue, verbouings, erfenis-sensitiewe stof, en herhaal- of opmeetwerk in, met fasilitering van stadsraad-indienings waar nodig.",
+        bioTitle: "Rudolf van Schalkwyk",
+        bio: [
+          "Rudolf van Schalkwyk is ’n Professionele Argitek met ondervinding van ’n wye verskeidenheid projektipes. Hy was betrokke by die ontwerp van industriële, opvoedkundige, residensiële en institusionele projekte van wisselende sensitiwiteit en kompleksiteit, met begrotings van meer as R300m.",
+          "As ’n ywerige student van argitektuur het hy sy Meestersgraad aan die Universiteit van Pretoria voltooi, en later ’n Baccalaureus Scientiae in Bourekenkunde aan die Universiteit van die Vrystaat verwerf.",
+          "Hy het ’n boek geskryf oor die begroting van ’n bouprojek, maar moet nog ’n uitgewer daarvoor vind."
+        ],
+        assocTitle: "assosiasies",
+        assoc: ["SACAP — Professionele Argitek (PrArch)"]
       },
       design: {
         title: "ontwerp filosofie",
@@ -317,8 +351,26 @@ window.BOS = {
       feesCalc: {
         title: "argitektoniese dienste berekenaar",
         docTitle: "argiteksfooie — bos",
-        lede: "Fooie kan op drie maniere gelees word. Geen hiervan is ’n afslag nie, en niks vervang ’n getekende kliënt–argitek ooreenkoms nie.",
-        box: "INDEMNITEIT: Fooi-uitsette is opvoedkundig. SACAP-riglyne, tydrekords, en die werklike brief regeer ’n ware aanstelling."
+        lede: "Fooie kan op drie maniere gelees word: as ’n deel van die konstruksiebegroting, volgens tyd, of diens vir diens (ArchiTAD). Geen afslag word aangebied nie, en niks hiervan vervang ’n getekende kliënt–argitek-ooreenkoms nie.",
+        box: "VRYWARING: Fooi-uitsette is slegs aanduidend en is gebaseer op die bos professionele fooitariewe soos bygewerk op {updated}. Hierdie tariewe verval op {expires}; daarna word die berekenaar afgeskakel totdat die tariewe hernu is. SACAP-riglyne, die werklike opdrag en ’n getekende kliënt–argitek-ooreenkoms bepaal ’n werklike aanstelling. Bedrae sluit BTW uit.",
+        expired: "Die fooitariewe op hierdie bladsy het op {expires} verval. Kontak asseblief bos vir huidige professionele fooie.",
+        budget: "konstruksiebegroting (ZAR)",
+        complexity: "projekkompleksiteit",
+        cx: { low: "laag", medium: "medium", high: "hoog" },
+        method: "metode",
+        methods: { scale: "projekkoste-gebaseer", time: "tyd-gebaseer", architad: "ArchiTAD (diens vir diens)" },
+        hours: "beraamde ure",
+        package: "dienspakket",
+        packages: { full: "volle diens", half: "halwe diens", minimal: "minimale diens", custom: "pasgemaak" },
+        state: { I: "ingesluit", L: "beperk", X: "nie ingesluit" },
+        stage: "fase",
+        share: "deel",
+        fee: "fooi",
+        totalFee: "argiteksfooi",
+        totalHours: "beplande ure",
+        deposit: "deposito benodig",
+        rateNote: "Uurtarief {rate}/h. Beperkte dienste tel teen die helfte van hul deel.",
+        bandNote: "Fooiband vanaf {lo}: basis {base} plus {pct} op die bedrag bo die begin van die band."
       },
       projectCalc: {
         title: "projek koste berekenaar",
@@ -400,7 +452,7 @@ window.BOS = {
     }
   },
   contact: {
-    phone: [43, 50, 55, 49, 50, 32, 51, 52, 53, 32, 54, 55, 56, 57],
+    phone: [48, 56, 50, 32, 56, 56, 54, 32, 52, 53, 55, 53],
     email: [105, 110, 102, 111, 64, 98, 111, 115, 45, 97, 114, 99, 104, 46, 99, 111, 46, 122, 97],
     cityEn: "Bryanston, Johannesburg",
     cityAf: "Bryanston, Johannesburg",
@@ -408,6 +460,506 @@ window.BOS = {
       en: { phone: "number", email: "email", address: "address" },
       af: { phone: "nommer", email: "epos", address: "adres" }
     }
+  },
+  /* 2026 professional fee model — copied from the bos fee spreadsheet (see docs/CALCULATORS.md).
+     validUntil: after this date the fee calculator switches itself off. Update rates + dates together. */
+  fees: {
+    "updated": "2026-03-07",
+    "validUntil": "2027-03-06",
+    "source": "Architectural Contract Template (Google Sheet), updated 2026-03-07",
+    "hourly": 1991,
+    "scale": {
+      "high": [
+        {
+          "from": 1.0,
+          "base": 13610.22,
+          "pct": 0.2104
+        },
+        {
+          "from": 200001,
+          "base": 55682.01,
+          "pct": 0.1759
+        },
+        {
+          "from": 650001,
+          "base": 134845.83,
+          "pct": 0.1738
+        },
+        {
+          "from": 2000001,
+          "base": 369421.66,
+          "pct": 0.156
+        },
+        {
+          "from": 4000001,
+          "base": 681421.5,
+          "pct": 0.1536
+        },
+        {
+          "from": 6500001,
+          "base": 1065421.35,
+          "pct": 0.138
+        },
+        {
+          "from": 13000001,
+          "base": 1962421.21,
+          "pct": 0.1294
+        },
+        {
+          "from": 40000001,
+          "base": 5455141.08,
+          "pct": 0.1254
+        },
+        {
+          "from": 130000001,
+          "base": 16741140.96,
+          "pct": 0.1214
+        },
+        {
+          "from": 260000001,
+          "base": 32528340.84,
+          "pct": 0.1122
+        },
+        {
+          "from": 520000001,
+          "base": 61700340.72,
+          "pct": 0.1082
+        },
+        {
+          "from": 1040000001,
+          "base": 117985140.62,
+          "pct": 0.1056
+        }
+      ],
+      "medium": [
+        {
+          "from": 1.0,
+          "base": 11341.85,
+          "pct": 0.1753
+        },
+        {
+          "from": 200001,
+          "base": 46401.67,
+          "pct": 0.1466
+        },
+        {
+          "from": 650001,
+          "base": 112371.53,
+          "pct": 0.1448
+        },
+        {
+          "from": 2000001,
+          "base": 307851.38,
+          "pct": 0.13
+        },
+        {
+          "from": 4000001,
+          "base": 567851.25,
+          "pct": 0.128
+        },
+        {
+          "from": 6500001,
+          "base": 887851.13,
+          "pct": 0.115
+        },
+        {
+          "from": 13000001,
+          "base": 1635351.01,
+          "pct": 0.1078
+        },
+        {
+          "from": 40000001,
+          "base": 4545950.9,
+          "pct": 0.1045
+        },
+        {
+          "from": 130000001,
+          "base": 13950950.8,
+          "pct": 0.1012
+        },
+        {
+          "from": 260000001,
+          "base": 27106950.7,
+          "pct": 0.0935
+        },
+        {
+          "from": 520000001,
+          "base": 51416950.6,
+          "pct": 0.0902
+        },
+        {
+          "from": 1040000001,
+          "base": 98320950.51,
+          "pct": 0.088
+        }
+      ],
+      "low": [
+        {
+          "from": 1.0,
+          "base": 9073.48,
+          "pct": 0.1402
+        },
+        {
+          "from": 200001,
+          "base": 37121.34,
+          "pct": 0.1173
+        },
+        {
+          "from": 650001,
+          "base": 89897.22,
+          "pct": 0.1158
+        },
+        {
+          "from": 2000001,
+          "base": 246281.11,
+          "pct": 0.104
+        },
+        {
+          "from": 4000001,
+          "base": 454281.0,
+          "pct": 0.1024
+        },
+        {
+          "from": 6500001,
+          "base": 710280.9,
+          "pct": 0.092
+        },
+        {
+          "from": 13000001,
+          "base": 1308280.81,
+          "pct": 0.0862
+        },
+        {
+          "from": 40000001,
+          "base": 3636760.72,
+          "pct": 0.0836
+        },
+        {
+          "from": 130000001,
+          "base": 11160760.64,
+          "pct": 0.081
+        },
+        {
+          "from": 260000001,
+          "base": 21685560.56,
+          "pct": 0.0748
+        },
+        {
+          "from": 520000001,
+          "base": 41133560.48,
+          "pct": 0.0722
+        },
+        {
+          "from": 1040000001,
+          "base": 78656760.41,
+          "pct": 0.0704
+        }
+      ]
+    },
+    "stages": [
+      {
+        "id": "s1",
+        "en": "stage 1: inception",
+        "af": "fase 1: aanvang",
+        "pct": 0.02,
+        "tasks": [
+          {
+            "en": "Receive, appraise, and report on the client's requirements about the client's brief",
+            "af": "Ontvang, evalueer en rapporteer oor die kliënt se vereistes en opdrag",
+            "pct": 0.005,
+            "pkg": "III"
+          },
+          {
+            "en": "Determine the site and rights, and constraints",
+            "af": "Bepaal die terrein, sy regte en beperkings",
+            "pct": 0.005,
+            "pkg": "III"
+          },
+          {
+            "en": "Determine budgetary constraints",
+            "af": "Bepaal begrotingsbeperkings",
+            "pct": 0.002,
+            "pkg": "IIX"
+          },
+          {
+            "en": "Determine the need for consultants",
+            "af": "Bepaal watter konsultante nodig is",
+            "pct": 0.002,
+            "pkg": "IIX"
+          },
+          {
+            "en": "Determine indicative project timelines",
+            "af": "Bepaal aanduidende projektydlyne",
+            "pct": 0.002,
+            "pkg": "IXX"
+          },
+          {
+            "en": "Determine methods of contracting",
+            "af": "Bepaal kontrakteringsmetodes",
+            "pct": 0.002,
+            "pkg": "IXX"
+          },
+          {
+            "en": "Whether other statutory authority applications are required or desirable.",
+            "af": "Bepaal of ander statutêre aansoeke nodig of wenslik is",
+            "pct": 0.002,
+            "pkg": "IIX"
+          }
+        ]
+      },
+      {
+        "id": "s2",
+        "en": "stage 2: concept & viability",
+        "af": "fase 2: konsep en lewensvatbaarheid",
+        "pct": 0.15,
+        "tasks": [
+          {
+            "en": "Prepare an initial design concept and advise on",
+            "af": "Berei ’n aanvanklike ontwerpkonsep voor",
+            "pct": 0.02,
+            "pkg": "III"
+          },
+          {
+            "en": "The intended space provisions and planning relationships",
+            "af": "Adviseer oor ruimtevoorsiening en beplanningsverhoudings",
+            "pct": 0.03,
+            "pkg": "III"
+          },
+          {
+            "en": "Proposed materials and intended building services",
+            "af": "Adviseer oor voorgestelde materiale en boudienste",
+            "pct": 0.03,
+            "pkg": "III"
+          },
+          {
+            "en": "The technical and functional characteristics of the design.",
+            "af": "Adviseer oor die tegniese en funksionele eienskappe van die ontwerp",
+            "pct": 0.03,
+            "pkg": "IIX"
+          },
+          {
+            "en": "Check for conformity of the concept with the rights to the use of the land.",
+            "af": "Toets die konsep teen die grondgebruiksregte",
+            "pct": 0.02,
+            "pkg": "IIX"
+          },
+          {
+            "en": "Consult with local and statutory authorities.",
+            "af": "Raadpleeg plaaslike en statutêre owerhede",
+            "pct": 0.005,
+            "pkg": "IXX"
+          },
+          {
+            "en": "Review the anticipated costs of the project.",
+            "af": "Hersien die verwagte projekkoste",
+            "pct": 0.005,
+            "pkg": "IXX"
+          },
+          {
+            "en": "Review the project programme.",
+            "af": "Hersien die projekprogram",
+            "pct": 0.01,
+            "pkg": "IXX"
+          }
+        ]
+      },
+      {
+        "id": "s3",
+        "en": "stage 3: design development",
+        "af": "fase 3: ontwerpontwikkeling",
+        "pct": 0.2,
+        "tasks": [
+          {
+            "en": "Develop all aspects of the design from concept to full development, including, but not limited to, construction systems, materials, fittings, and finishes selections",
+            "af": "Ontwikkel die ontwerp volledig, insluitend konstruksiestelsels, materiale, toebehore en afwerkings",
+            "pct": 0.1,
+            "pkg": "III"
+          },
+          {
+            "en": "Review the programme and budget with the client, principal consultant, or other consultants",
+            "af": "Hersien die program en begroting saam met die kliënt en konsultante",
+            "pct": 0.01,
+            "pkg": "IXX"
+          },
+          {
+            "en": "Coordinate other consultants' designs into the building design",
+            "af": "Koördineer ander konsultante se ontwerpe in die gebouontwerp",
+            "pct": 0.04,
+            "pkg": "IIX"
+          },
+          {
+            "en": "Prepare design development drawings, including drafting technical details and material specifications",
+            "af": "Berei ontwerpontwikkelingstekeninge, tegniese besonderhede en materiaalspesifikasies voor",
+            "pct": 0.04,
+            "pkg": "III"
+          },
+          {
+            "en": "Discuss and agree on the building plan application and approval requirements with the local authority",
+            "af": "Kom met die plaaslike owerheid ooreen oor die vereistes vir die bouplanaansoek",
+            "pct": 0.01,
+            "pkg": "IIX"
+          }
+        ]
+      },
+      {
+        "id": "s4.1",
+        "en": "stage 4.1: council submission",
+        "af": "fase 4.1: raadsvoorlegging",
+        "pct": 0.1,
+        "tasks": [
+          {
+            "en": "Prepare documentation required for local authority building plan application submission",
+            "af": "Berei dokumentasie vir die bouplanaansoek by die plaaslike owerheid voor",
+            "pct": 0.05,
+            "pkg": "IIX"
+          },
+          {
+            "en": "Co-ordinate technical documentation with the consultants and complete primary co-ordination sufficient to support building plan submission",
+            "af": "Koördineer tegniese dokumentasie met die konsultante, voldoende vir die bouplanvoorlegging",
+            "pct": 0.03,
+            "pkg": "IIX"
+          },
+          {
+            "en": "Review the costing and programme with the consultants",
+            "af": "Hersien die koste en program saam met die konsultante",
+            "pct": 0.015,
+            "pkg": "IXX"
+          },
+          {
+            "en": "Obtain the client's authority and submit documents for approval at the local authority.",
+            "af": "Verkry die kliënt se magtiging en dien die dokumente vir goedkeuring in",
+            "pct": 0.005,
+            "pkg": "IIX"
+          }
+        ]
+      },
+      {
+        "id": "s4.2",
+        "en": "stage 4.2: tender documentation",
+        "af": "fase 4.2: tenderdokumentasie",
+        "pct": 0.2,
+        "tasks": [
+          {
+            "en": "Prepare specifications for the works",
+            "af": "Berei spesifikasies vir die werke voor",
+            "pct": 0.02,
+            "pkg": "IIX"
+          },
+          {
+            "en": "Complete technical documentation sufficient for tender",
+            "af": "Voltooi tegniese dokumentasie voldoende vir tender",
+            "pct": 0.1,
+            "pkg": "IIX"
+          },
+          {
+            "en": "Obtain offers for the execution of the works",
+            "af": "Verkry aanbiedinge vir die uitvoering van die werke",
+            "pct": 0.01,
+            "pkg": "IXX"
+          },
+          {
+            "en": "Evaluate offers and recommend a successful tenderer for appointment",
+            "af": "Evalueer aanbiedinge en beveel ’n suksesvolle tenderaar vir aanstelling aan",
+            "pct": 0.01,
+            "pkg": "IIX"
+          },
+          {
+            "en": "Prepare the contract documentation and arrange the signing of the building contract by the client and the successful tenderer",
+            "af": "Berei die kontrakdokumentasie voor en reël die ondertekening van die boukontrak",
+            "pct": 0.01,
+            "pkg": "IXX"
+          },
+          {
+            "en": "Complete all remaining technical and construction documentation and coordinate the same with the consultants",
+            "af": "Voltooi en koördineer alle oorblywende tegniese en konstruksiedokumentasie met die konsultante",
+            "pct": 0.05,
+            "pkg": "IXX"
+          }
+        ]
+      },
+      {
+        "id": "s5",
+        "en": "stage 5: construction",
+        "af": "fase 5: konstruksie",
+        "pct": 0.3,
+        "tasks": [
+          {
+            "en": "Administer the building contract",
+            "af": "Administreer die boukontrak",
+            "pct": 0.05,
+            "pkg": "IXX"
+          },
+          {
+            "en": "Give possession of the site to the contractor",
+            "af": "Gee besit van die terrein aan die kontrakteur",
+            "pct": 0.01,
+            "pkg": "IXX"
+          },
+          {
+            "en": "Issue construction documentation",
+            "af": "Reik konstruksiedokumentasie uit",
+            "pct": 0.15,
+            "pkg": "ILX"
+          },
+          {
+            "en": "Review sub-contractor designs, shop drawings, and documentation for conformity of design intent",
+            "af": "Hersien subkontrakteursontwerpe, werkswinkeltekeninge en dokumentasie teen die ontwerpbedoeling",
+            "pct": 0.01,
+            "pkg": "IXX"
+          },
+          {
+            "en": "Inspect the works for conformity with the contract documentation and acceptable quality in terms of industry standards",
+            "af": "Inspekteer die werke vir ooreenstemming met die kontrakdokumente en aanvaarbare gehalte",
+            "pct": 0.05,
+            "pkg": "IIX"
+          },
+          {
+            "en": "Administer and perform the duties and obligations assigned to the principal agent in the building contract",
+            "af": "Voer die pligte van die hoofagent onder die boukontrak uit",
+            "pct": 0.01,
+            "pkg": "IXX"
+          },
+          {
+            "en": "Manage the completion process of the project",
+            "af": "Bestuur die voltooiingsproses van die projek",
+            "pct": 0.01,
+            "pkg": "IXX"
+          },
+          {
+            "en": "Assist the client in obtaining the required documentation necessary for the client to obtain the occupation certificate.",
+            "af": "Help die kliënt met die dokumente wat nodig is vir die okkupasiesertifikaat",
+            "pct": 0.01,
+            "pkg": "IXX"
+          }
+        ]
+      },
+      {
+        "id": "s6",
+        "en": "stage 6: close-out",
+        "af": "fase 6: afhandeling",
+        "pct": 0.03,
+        "tasks": [
+          {
+            "en": "Facilitate the project close-out, including the collation of the necessary documentation to effect completion, handover, and operational manual of the project.",
+            "af": "Fasiliteer die afhandeling, insluitend voltooiing, oorhandiging en die bedryfshandleiding",
+            "pct": 0.01,
+            "pkg": "IXX"
+          },
+          {
+            "en": "When the contractor's obligations to the building contract have been fulfilled, the architectural professional shall issue the certificates related to the contract completion.",
+            "af": "Reik die kontrakvoltooiingsertifikate uit sodra die kontrakteur sy verpligtinge nagekom het",
+            "pct": 0.01,
+            "pkg": "IXX"
+          },
+          {
+            "en": "Provide the client with construction record documentation and the relevant technical and contractual undertakings by the contractor and subcontractors.",
+            "af": "Verskaf rekorddokumentasie en die tegniese en kontraktuele ondernemings van die kontrakteur en subkontrakteurs",
+            "pct": 0.01,
+            "pkg": "ILX"
+          }
+        ]
+      }
+    ]
   },
   rates: Object.freeze({
     types: Object.freeze({
@@ -418,30 +970,7 @@ window.BOS = {
       warehouse: 9000,
       retail: 17500
     }),
-    luxury: Object.freeze({ 1: 0.85, 2: 1, 3: 1.25, 4: 1.6 }),
-    feePct: Object.freeze({ house: 0.085, commercial: 0.07, industrial: 0.055 }),
-    principalPerHour: 1850,
-    technologistPerHour: 950,
-    tasks: Object.freeze([
-      { id: "inception", hours: 16, labelEn: "inception & brief", labelAf: "aanvang & brief",
-        descEn: "Site visit, brief workshop, budget envelope, and a written scope of appointment.",
-        descAf: "Terreinbesoek, brief-werkswinkel, begrotingsomhulsel, en ’n geskrewe omvang van aanstelling." },
-      { id: "concept", hours: 40, labelEn: "concept drawings", labelAf: "konseptekeninge",
-        descEn: "Sketch plans, massing and character studies tested against the planning envelope.",
-        descAf: "Sketsplanne, massa- en karakterstudies, getoets teen die beplanningsomhulsel." },
-      { id: "developed", hours: 64, labelEn: "design development", labelAf: "ontwerpontwikkeling",
-        descEn: "Plans, sections and elevations fixed with the engineers; materials and envelope resolved.",
-        descAf: "Planne, snitte en aansigte vasgestel saam met die ingenieurs; materiale en omhulsel opgelos." },
-      { id: "docs", hours: 80, labelEn: "documentation", labelAf: "dokumentasie",
-        descEn: "Council submission drawings, construction details and schedules for pricing.",
-        descAf: "Raadsvoorleggingstekeninge, konstruksiedetails en skedules vir prysbepaling." },
-      { id: "council", hours: 24, labelEn: "council facilitation", labelAf: "raad-fasilitering",
-        descEn: "Submitting, tracking and answering municipal comments until approval.",
-        descAf: "Indiening, opvolging en beantwoording van munisipale kommentaar tot goedkeuring." },
-      { id: "inspect", hours: 48, labelEn: "construction inspections", labelAf: "konstruksie-inspeksies",
-        descEn: "Scheduled site inspections, site instructions and answering contractor queries.",
-        descAf: "Geskeduleerde terreininspeksies, terreininstruksies en antwoorde op kontrakteursnavrae." }
-    ].map(Object.freeze))
+    luxury: Object.freeze({ 1: 0.85, 2: 1, 3: 1.25, 4: 1.6 })
   })
 };
 
@@ -454,7 +983,7 @@ window.BOS = {
     });
     return Object.freeze(o);
   }
-  ["rates", "contact"].forEach(function (key) {
+  ["rates", "fees", "contact"].forEach(function (key) {
     var value = deepFreeze(B[key]);
     Object.defineProperty(B, key, { value: value, writable: false, configurable: false, enumerable: true });
   });
